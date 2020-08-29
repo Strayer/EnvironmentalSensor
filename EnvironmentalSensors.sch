@@ -1,0 +1,315 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Temperature:DS18B20 U2
+U 1 1 5F120044
+P 5400 1550
+F 0 "U2" H 5170 1504 50  0000 R CNN
+F 1 "DS18B20" H 5170 1595 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4400 1300 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf" H 5250 1800 50  0001 C CNN
+	1    5400 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L MCU_Module:WeMos_D1_mini U1
+U 1 1 5F121194
+P 1750 1950
+F 0 "U1" H 1750 1061 50  0000 C CNN
+F 1 "WeMos_D1_mini" H 1750 970 50  0000 C CNN
+F 2 "Module:WEMOS_D1_mini_light" H 1750 800 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H -100 800 50  0001 C CNN
+	1    1750 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L EnvSensorLibrary:MH-Z19B J2
+U 1 1 5F1281DF
+P 5450 3050
+F 0 "J2" H 5578 2876 50  0000 L CNN
+F 1 "MH-Z19B" H 5578 2785 50  0000 L CNN
+F 2 "EnvironmentalSensors:MH-Z19B" H 5450 3100 50  0001 C CNN
+F 3 "" H 5450 3100 50  0001 C CNN
+	1    5450 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F128FE4
+P 4900 1800
+F 0 "R1" H 4970 1846 50  0000 L CNN
+F 1 "4k7" H 4970 1755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4830 1800 50  0001 C CNN
+F 3 "~" H 4900 1800 50  0001 C CNN
+	1    4900 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR02
+U 1 1 5F12CF27
+P 1850 850
+F 0 "#PWR02" H 1850 700 50  0001 C CNN
+F 1 "+3V3" H 1865 1023 50  0000 C CNN
+F 2 "" H 1850 850 50  0001 C CNN
+F 3 "" H 1850 850 50  0001 C CNN
+	1    1850 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5F12E08C
+P 1650 850
+F 0 "#PWR01" H 1650 700 50  0001 C CNN
+F 1 "+5V" H 1665 1023 50  0000 C CNN
+F 2 "" H 1650 850 50  0001 C CNN
+F 3 "" H 1650 850 50  0001 C CNN
+	1    1650 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 1550 4900 1550
+Wire Wire Line
+	4900 1550 4900 1650
+$Comp
+L power:GND #PWR08
+U 1 1 5F134D6E
+P 5400 1250
+F 0 "#PWR08" H 5400 1000 50  0001 C CNN
+F 1 "GND" H 5405 1077 50  0000 C CNN
+F 2 "" H 5400 1250 50  0001 C CNN
+F 3 "" H 5400 1250 50  0001 C CNN
+	1    5400 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR05
+U 1 1 5F1364C3
+P 4900 2050
+F 0 "#PWR05" H 4900 1900 50  0001 C CNN
+F 1 "+3V3" V 4915 2178 50  0000 L CNN
+F 2 "" H 4900 2050 50  0001 C CNN
+F 3 "" H 4900 2050 50  0001 C CNN
+	1    4900 2050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4900 1550 2150 1550
+Connection ~ 4900 1550
+$Comp
+L power:GND #PWR07
+U 1 1 5F137DBE
+P 4900 2500
+F 0 "#PWR07" H 4900 2250 50  0001 C CNN
+F 1 "GND" V 4905 2372 50  0000 R CNN
+F 2 "" H 4900 2500 50  0001 C CNN
+F 3 "" H 4900 2500 50  0001 C CNN
+	1    4900 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L EnvSensorLibrary:BME280-Breakout J1
+U 1 1 5F1451CD
+P 5350 2500
+F 0 "J1" H 5630 2500 50  0000 L CNN
+F 1 "BME280-Breakout" H 5630 2409 50  0000 L CNN
+F 2 "EnvironmentalSensors:BME280_BME680" H 5350 2500 50  0001 C CNN
+F 3 "~" H 5350 2500 50  0001 C CNN
+	1    5350 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR06
+U 1 1 5F14962E
+P 4900 2400
+F 0 "#PWR06" H 4900 2250 50  0001 C CNN
+F 1 "+3V3" V 4915 2528 50  0000 L CNN
+F 2 "" H 4900 2400 50  0001 C CNN
+F 3 "" H 4900 2400 50  0001 C CNN
+	1    4900 2400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2150 1650 4400 1650
+Wire Wire Line
+	4400 1650 4400 2600
+Wire Wire Line
+	4400 2600 5150 2600
+Wire Wire Line
+	5150 2700 4300 2700
+Wire Wire Line
+	4300 2700 4300 1750
+Wire Wire Line
+	4300 1750 2150 1750
+Wire Wire Line
+	4900 2500 5150 2500
+Wire Wire Line
+	5150 2400 4900 2400
+Wire Wire Line
+	4900 1950 4900 2050
+Wire Wire Line
+	4900 2050 5400 2050
+Wire Wire Line
+	5400 2050 5400 1850
+Connection ~ 4900 2050
+$Comp
+L power:+5V #PWR03
+U 1 1 5F1506D8
+P 4850 3100
+F 0 "#PWR03" H 4850 2950 50  0001 C CNN
+F 1 "+5V" V 4865 3228 50  0000 L CNN
+F 2 "" H 4850 3100 50  0001 C CNN
+F 3 "" H 4850 3100 50  0001 C CNN
+	1    4850 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5F1528A6
+P 4850 3400
+F 0 "#PWR04" H 4850 3150 50  0001 C CNN
+F 1 "GND" V 4855 3272 50  0000 R CNN
+F 2 "" H 4850 3400 50  0001 C CNN
+F 3 "" H 4850 3400 50  0001 C CNN
+	1    4850 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4850 3100 5200 3100
+Text Label 700  1850 0    50   ~ 0
+RX-D1-MINI
+Text Label 700  1950 0    50   ~ 0
+TX-D1-MINI
+Wire Wire Line
+	700  1950 1350 1950
+Wire Wire Line
+	5200 3200 4750 3200
+Text Label 4750 3300 0    50   ~ 0
+TX-D1-MINI
+Text Label 4750 3200 0    50   ~ 0
+RX-D1-MINI
+NoConn ~ 2150 1450
+NoConn ~ 2150 1850
+NoConn ~ 2150 1950
+NoConn ~ 2150 2050
+NoConn ~ 2150 2150
+NoConn ~ 2150 2250
+NoConn ~ 2150 2350
+NoConn ~ 1350 1550
+Wire Wire Line
+	5200 3300 4750 3300
+Wire Wire Line
+	4850 3400 5200 3400
+Wire Wire Line
+	700  1850 1350 1850
+$Comp
+L power:GND #PWR0101
+U 1 1 5F15EA9F
+P 1750 3100
+F 0 "#PWR0101" H 1750 2850 50  0001 C CNN
+F 1 "GND" H 1755 2927 50  0000 C CNN
+F 2 "" H 1750 3100 50  0001 C CNN
+F 3 "" H 1750 3100 50  0001 C CNN
+	1    1750 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2750 1750 3100
+Wire Wire Line
+	1850 850  1850 1150
+Wire Wire Line
+	1650 850  1650 1150
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5F164C16
+P 650 7300
+F 0 "#FLG0101" H 650 7375 50  0001 C CNN
+F 1 "PWR_FLAG" H 650 7473 50  0000 C CNN
+F 2 "" H 650 7300 50  0001 C CNN
+F 3 "~" H 650 7300 50  0001 C CNN
+	1    650  7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5F16623E
+P 950 7300
+F 0 "#FLG0102" H 950 7375 50  0001 C CNN
+F 1 "PWR_FLAG" H 950 7473 50  0000 C CNN
+F 2 "" H 950 7300 50  0001 C CNN
+F 3 "~" H 950 7300 50  0001 C CNN
+	1    950  7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 5F167759
+P 950 7450
+F 0 "#PWR0102" H 950 7300 50  0001 C CNN
+F 1 "+5V" H 965 7623 50  0000 C CNN
+F 2 "" H 950 7450 50  0001 C CNN
+F 3 "" H 950 7450 50  0001 C CNN
+	1    950  7450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5F168E19
+P 650 7450
+F 0 "#PWR0104" H 650 7200 50  0001 C CNN
+F 1 "GND" H 655 7277 50  0000 C CNN
+F 2 "" H 650 7450 50  0001 C CNN
+F 3 "" H 650 7450 50  0001 C CNN
+	1    650  7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	650  7300 650  7450
+Wire Wire Line
+	950  7300 950  7450
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5F2DBCAA
+P 1950 4000
+F 0 "H1" H 2050 4046 50  0000 L CNN
+F 1 "MountingHole" H 2050 3955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1950 4000 50  0001 C CNN
+F 3 "~" H 1950 4000 50  0001 C CNN
+	1    1950 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5F2DC39C
+P 1950 4300
+F 0 "H2" H 2050 4346 50  0000 L CNN
+F 1 "MountingHole" H 2050 4255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1950 4300 50  0001 C CNN
+F 3 "~" H 1950 4300 50  0001 C CNN
+	1    1950 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5F2DCE57
+P 1950 4600
+F 0 "H3" H 2050 4646 50  0000 L CNN
+F 1 "MountingHole" H 2050 4555 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1950 4600 50  0001 C CNN
+F 3 "~" H 1950 4600 50  0001 C CNN
+	1    1950 4600
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
